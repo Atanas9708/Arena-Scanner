@@ -1,0 +1,50 @@
+<header>
+  <h1>Warmane Armory Scanner</h1>
+</header>
+
+<div class="choice">
+  <label for="realm">Realm</label>
+  <select [(ngModel)]="realm" (change)="onChange()" name="realm" id="realm">
+    <option>Icecrown</option>
+    <option>Lordaeron</option>
+    <option>Blackrock</option>
+  </select>
+
+  <label for="bracket">Bracket</label>
+  <select class="form-control" [(ngModel)]="bracket" (change)="onChange()" name="bracket" id="bracket">
+    <option>2v2</option>
+    <option>3v3</option>
+    <option>5v5</option>
+    <option>SoloQ</option>
+  </select>
+</div>
+
+<button [hidden]="fetching ? true : false" [disabled]="fetching" (click)="refresh()">Refresh</button>
+
+
+<div *ngIf="fetching" class="spinner">
+  <div class="bounce1"></div>
+  <div class="bounce2"></div>
+  <div class="bounce3"></div>
+</div>
+
+<div *ngIf="!fetching && playingTeams.length > 0" class="teams">
+  <article (click)="openTeamArmory($event, info)" *ngFor="let info of playingTeams">
+    <h1>{{info?.teamName}}</h1>
+    <h2>{{info?.rating}}</h2>
+    <h2>Rank {{info?.rank}}</h2>
+    <h3>{{info?.time}} ago</h3>
+    <img id="classImg" *ngIf="info.classImg" src="http://armory.warmane.com/{{info?.classImg}}" alt="info-classImg">
+    <ul>
+      <li *ngFor="let player of info.players">
+        <a href="javascript:void(0)" (click)="openPlayerArmory($event, player)">
+          <img id="img" src="http://armory.warmane.com{{player?.class}}" alt="player-class"> {{player?.name}}
+        </a>
+      </li>
+    </ul>
+  </article>
+</div>
+
+<div *ngIf="noTeams && !fetching" class="noTeams">
+  <h3>No teams have played in the played in the past hour</h3>
+</div>

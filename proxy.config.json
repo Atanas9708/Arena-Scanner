@@ -1,0 +1,33 @@
+{
+  "/2v2/*": {
+    "target": "http://armory.warmane.com",
+    "secure": false,
+    "changeOrigin": true
+  },
+  "/3v3/*": {
+    "target": "http://armory.warmane.com",
+    "secure": false,
+    "changeOrigin": true
+  },
+  "/5v5/*": {
+    "target": "http://armory.warmane.com",
+    "secure": false,
+    "changeOrigin": true
+  },
+  "/SoloQ/Blackrock": {
+    "target": "http://armory.warmane.com",
+    "secure": false,
+    "changeOrigin": true
+  },
+  "/team/*": {
+    "target": "http://armory.warmane.com",
+    "secure": false,
+    "changeOrigin": true
+  },
+  "/character/*": {
+    "target": "http://armory.warmane.com",
+    "secure": false,
+    "changeOrigin": true
+  }
+
+}

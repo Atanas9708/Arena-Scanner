@@ -1,0 +1,161 @@
+header > h1 {
+  text-align: center;
+  color: blue;
+}
+
+.choice {
+  margin: auto;
+  text-align: center;
+  margin-top: 150px;
+}
+
+.choice label {
+  font-size: 20px;
+}
+
+.choice select {
+  margin-right: 10px;
+  margin-left: 5px;
+  border: transparent;
+  background-color: transparent;
+  border-bottom: 2px solid black;
+} 
+
+.choice option {
+  background-color: transparent;
+  font-size: 15px;
+}
+
+.teams {
+  width: 96%;
+  align-items: center;
+  margin: auto;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.teams article {
+  color: black;
+  width: 350px;
+  height: 300px;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+
+article ul {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  padding-left: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+article li {
+  list-style: none;
+  width: 25%;
+  padding-right: 15px;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+article li a {
+  text-decoration: none;
+  color: black;
+}
+
+article img {
+  display: block;
+  margin: auto;
+}
+
+article:hover {
+  cursor: pointer;
+  background-color: bisque;
+}
+
+button {
+  background-color: green;
+  color: #fff;
+  padding: 10px;
+  width: 100px;
+  border: transparent;
+  border-radius: 20px;
+  float: right;
+  margin-right: 370px;
+  position: relative;
+  bottom: 30px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #fff;
+  border: 2px solid green;
+  color: green;
+}
+
+.spinner {
+  width: 100px;
+  margin: auto;
+  margin-top: 111px;
+}
+
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: #333;
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 40% { 
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+}
+
+select, button {
+  outline: none;
+}
+
+.noTeams {
+  text-align: center;
+  margin-top: 60px;
+}
+
+#img:hover {
+  width: 22px;
+}
+
+#classImg {
+  width: 22px;
+  margin-top: 35px;
+}
